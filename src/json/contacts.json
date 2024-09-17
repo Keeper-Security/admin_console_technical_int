@@ -1,0 +1,18 @@
+[
+    {
+        "name": "Zachary Tufford",
+        "position": "Team Lead",
+        "image": "zackTufford",
+        "contact": {
+            "email": "ztufford@keepersecurity.com"
+        }
+    },
+    {
+        "name": "Chris Kendig",
+        "position": "Senior Software Engineer",
+        "image": "chrisKendig",
+        "contact": {
+            "email": "ckendig@keepersecurity.com"
+        }
+    }
+]
