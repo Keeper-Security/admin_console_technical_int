@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { BLACK, GRAY, WHITE } from "../../../style/colors";
+import { BLACK, GRAY } from "../../../style/colors";
 
 export const NavContainer = styled.div`
     width: 240px;
@@ -23,14 +23,10 @@ export const NavList = styled.ul`
 
 export const NavItem = styled.li`
     width: 100%;
-
-    a {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        cursor: pointer;
-        color: ${BLACK.primary};
-    }
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
 `;
 
 export const NavItemIcon = styled.div`

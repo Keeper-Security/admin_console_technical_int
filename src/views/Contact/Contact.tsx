@@ -20,7 +20,6 @@ import { CopyToClipboard } from 'react-copy-to-clipboard';
 import { useState, useEffect } from "react";
 
 const Contact = () => {
-
     const [ isCopied, setIsCopied ] = useState(-1);
 
     useEffect(() => {
@@ -55,7 +54,7 @@ const Contact = () => {
                                 break;
                         }
                         return (
-                            <ContactCard>
+                            <ContactCard key={contact.image}>
                                 <ProfileImage>
                                     <img src={contactImage} alt={contact.name} />
                                 </ProfileImage>

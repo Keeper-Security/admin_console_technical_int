@@ -1,40 +1,36 @@
+import { VIEW } from "../../utils/const";
 import { NavContainer, NavList, NavItem, NavItemIcon, NavItemText } from "./style/styledComponents";
 import { MdChecklist, MdOutlineMap, MdOutlineContactSupport } from 'react-icons/md';
 
+type NavigationProps = { setView: (view: VIEW) => void}
 
-const Navigation = () => {
+const Navigation: React.FC<NavigationProps> = ({ setView }) => {
     return (
         <NavContainer>
             <NavList>
-                <NavItem>
-                    <a href="/about">
-                        <NavItemIcon>
-                            <MdOutlineMap />
-                        </NavItemIcon>
-                        <NavItemText>
-                            About
-                        </NavItemText>
-                    </a>
+                <NavItem onClick={() => setView(VIEW.ABOUT)}>
+                    <NavItemIcon>
+                        <MdOutlineMap />
+                    </NavItemIcon>
+                    <NavItemText>
+                        About
+                    </NavItemText>
                 </NavItem>
-                <NavItem>
-                    <a href="/project">
-                        <NavItemIcon>
-                            <MdChecklist />
-                        </NavItemIcon>
-                        <NavItemText>
-                            Project
-                        </NavItemText>
-                    </a>
+                <NavItem onClick={() => setView(VIEW.PROJECT)}>
+                    <NavItemIcon>
+                        <MdChecklist />
+                    </NavItemIcon>
+                    <NavItemText>
+                        Project
+                    </NavItemText>
                 </NavItem>
-                <NavItem>
-                    <a href="/contact">
-                        <NavItemIcon>
-                            <MdOutlineContactSupport />
-                        </NavItemIcon>
-                        <NavItemText>
-                            Contact
-                        </NavItemText>
-                    </a>
+                <NavItem onClick={() => setView(VIEW.CONTACT)}>
+                    <NavItemIcon>
+                        <MdOutlineContactSupport />
+                    </NavItemIcon>
+                    <NavItemText>
+                        Contact
+                    </NavItemText>
                 </NavItem>
             </NavList>
         </NavContainer>
